@@ -292,16 +292,16 @@ h1 {
       <div class="step-card">
         <div class="step-header">
           <span class="step-title">Collect Campaign & Customer Data</span>
-          <span class="step-freq freq-teal">QUARTERLY</span>
+          <span class="step-freq freq-teal">ONGOING</span>
         </div>
-        <p class="step-desc">Pull all active campaign data, customer records, company descriptions, and financial data from Snowflake. This is the raw input that everything downstream depends on.</p>
+        <p class="step-desc">Pull all campaign data, customer records, company descriptions, and financials from Snowflake. Runs on every campaign on an ongoing basis once live in production (Phase 2). This is the raw input that everything downstream depends on.</p>
         <div class="step-details">
           <span class="detail-chip">Braintrust campaign snapshots</span>
           <span class="detail-chip">core__clients</span>
           <span class="detail-chip">finance__int_gross_profitables</span>
           <span class="detail-chip">stg_hubspot__companies</span>
         </div>
-        <div class="step-owner">Owner: Data Team + RevOps (Gabe)</div>
+        <div class="step-owner">Owner: Data + Activation</div>
       </div>
     </div>
 
@@ -313,15 +313,15 @@ h1 {
       <div class="step-card">
         <div class="step-header">
           <span class="step-title">Classify with AI Prompts</span>
-          <span class="step-freq freq-sky">QUARTERLY</span>
+          <span class="step-freq freq-sky">ONGOING</span>
         </div>
-        <p class="step-desc">Run Braintrust LLM prompts to classify every campaign along two dimensions. Use Case prompt assigns one of ~36 use cases (Market Research, Consumer Referrals, etc.). Company Type is determined by data model combinations of company type + use case -- no standalone prompt needed.</p>
+        <p class="step-desc">Braintrust LLM prompts classify every campaign's Use Case (~36 categories). Company Type is determined by data model combinations -- no standalone prompt needed. Runs continuously on new campaigns once in production (Phase 2).</p>
         <div class="step-details">
           <span class="detail-chip">Use Case prompt (validated, 96% accuracy)</span>
           <span class="detail-chip">Company Type = data model logic</span>
           <span class="detail-chip">Grain: campaign-level</span>
         </div>
-        <div class="step-owner">Owner: RevOps (Gabe/Mallika) + Data Team (Geoff)</div>
+        <div class="step-owner">Owner: Gabe</div>
       </div>
     </div>
 
@@ -344,7 +344,7 @@ h1 {
           <span class="detail-chip">Employee Rewards</span>
           <span class="detail-chip">+ flag new</span>
         </div>
-        <div class="step-owner">Owner: Data/Activation Team (maintains model) | RevOps (reviews new segments)</div>
+        <div class="step-owner">Owner: Mallika</div>
       </div>
     </div>
 
@@ -456,14 +456,12 @@ h1 {
           <span class="step-title">Execute Across Teams</span>
           <span class="step-freq freq-sky">ONGOING</span>
         </div>
-        <p class="step-desc">Each team takes the aligned priorities and executes within their domain. Marketing builds campaigns and paid audiences. Sales assigns account lists, builds SDR books, creates enablement docs. CS adjusts coverage models. RevOps monitors performance.</p>
+        <p class="step-desc">Each team takes the aligned priorities and executes within their domain. Marketing builds campaigns and paid audiences. Sales assigns account lists, builds SDR books, and creates enablement materials.</p>
         <div class="step-details">
-          <span class="detail-chip">Marketing: campaigns, content, paid targeting</span>
-          <span class="detail-chip">Sales: account lists, SDR books, AE kickoffs</span>
-          <span class="detail-chip">CS: coverage model, health monitoring</span>
-          <span class="detail-chip">RevOps: performance tracking</span>
+          <span class="detail-chip">Marketing: campaigns, paid</span>
+          <span class="detail-chip">Sales: account lists, SDR books, enablement</span>
         </div>
-        <div class="step-owner">Owner: Each team owns their execution | RevOps monitors</div>
+        <div class="step-owner">Owner: Each team owns execution</div>
       </div>
     </div>
 
